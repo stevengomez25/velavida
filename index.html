@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> 🔥 Vela Vida 🔥 </title>
+    <!-- Script de Tailwind CSS (Play CDN) -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+
+<body class="bg-[#efe4d9] text-slate-100 font-sans selection:bg-blue-400 selection:text-white">
+
+    <!-- Navbar fija con enlaces internos -->
+    <!-- Navbar Fija Artesanal & Responsive -->
+<nav class="fixed top-0 left-0 w-full bg-[#f7f4ee]/85 backdrop-blur-md z-50 border-b border-[#e2d8ca]/80 transition-all duration-300">
+    <div class="max-w-6xl mx-auto px-6 h-20 flex items-center justify-between">
+        
+        <!-- Brand / Logo -->
+        <a href="#inicio" class="flex items-center gap-3 group">
+            <img src="https://images.vexels.com/media/users/3/335809/isolated/preview/ea736cacc9e564a26199e3a030d5c8a9-ilustracion-de-un-trazo-de-planta-de-romero.png?w=360" 
+                 alt="Logo Vela Vida" 
+                 class="w-7 h-7 object-contain opacity-80 group-hover:scale-105 transition-transform duration-300">
+            <span class="font-serif text-xl tracking-widest text-[#c8714a] font-normal group-hover:text-[#b05d37] transition-colors">
+                VELA VIDA
+            </span>
+        </a>
+
+        <!-- Menú de navegación (Escritorio) -->
+        <div class="hidden md:flex items-center space-x-8 text-sm font-medium text-[#6d6655]">
+            <a href="#inicio" class="hover:text-[#c8714a] transition-colors py-1 relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[1.5px] after:bg-[#c8714a] hover:after:w-full after:transition-all">
+                Productos
+            </a>
+            <a href="#beneficios" class="hover:text-[#c8714a] transition-colors py-1 relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[1.5px] after:bg-[#c8714a] hover:after:w-full after:transition-all">
+                ¿Quiénes somos?
+            </a>
+            <a href="#contacto" class="bg-[#c8714a] hover:bg-[#b05d37] text-[#FAF8F5] px-5 py-2 rounded-full text-xs tracking-wider transition-all shadow-sm hover:shadow-md">
+                Contacto
+            </a>
+        </div>
+
+        <!-- Botón Menú Hamburguesa (Móvil) -->
+        <button id="mobile-menu-btn" 
+                type="button"
+                aria-label="Abrir menú" 
+                class="md:hidden p-2 text-[#6d6655] hover:text-[#c8714a] focus:outline-none">
+            <svg id="menu-icon-open" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M4 6h16M4 12h16M4 18h16"/>
+            </svg>
+            <svg id="menu-icon-close" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M6 18L18 6M6 6l12 12"/>
+            </svg>
+        </button>
+    </div>
+
+    <!-- Menú Desplegable (Móvil) -->
+    <div id="mobile-menu" class="hidden md:hidden bg-[#f7f4ee] border-b border-[#e2d8ca] px-6 pt-2 pb-6 space-y-4 text-center">
+        <a href="#inicio" class="mobile-link block text-[#6d6655] hover:text-[#c8714a] font-medium py-2 border-b border-[#e2d8ca]/40">
+            Productos
+        </a>
+        <a href="#beneficios" class="mobile-link block text-[#6d6655] hover:text-[#c8714a] font-medium py-2 border-b border-[#e2d8ca]/40">
+            ¿Quiénes somos?
+        </a>
+        <a href="#contacto" class="mobile-link block bg-[#c8714a] text-[#FAF8F5] font-medium py-2.5 rounded-full mt-3">
+            Contacto
+        </a>
+    </div>
+</nav>
+
+<!-- Script mínimo para activar el menú hamburguesa en móviles -->
+
+
+    <!-- Sección 1: Inicio / Hero -->
+    <section id="inicio" class="min-h-screen flex items-center justify-center pt-20 pb-12 px-6 bg-[#f7f4ee] bg-[url('./assets/imgbg.png')] bg-center bg-no-repeat bg-blend-luminosity
+
+">
+        <div class="max-w-6xl w-full grid grid-cols-1 lg:grid-cols-2 gap-12 items-center ">
+
+            <!-- COLUMNA IZQUIERDA (Adaptada con estilos congruentes a la imagen) -->
+            <div class="flex flex-col items-center lg:items-start text-center lg:text-left space-y-6 ">
+
+                <!-- Badge / Icono botánico superior -->
+                 <div class="flex flex-col items-center ">
+                    <div
+                        class="inline-flex items-center justify-center p-3 rounded-full border border-[#c8714a]/30 bg-[#f0e9df]">
+                        <img src="https://images.vexels.com/media/users/3/335809/isolated/preview/ea736cacc9e564a26199e3a030d5c8a9-ilustracion-de-un-trazo-de-planta-de-romero.png?w=360"
+                            alt="Romero Botánico"
+                            class="w-8 h-8 object-contain opacity-80 filter brightness-90 saturate-50">
+                    </div>
+
+                    <!-- Título principal -->
+                    <h1
+                        class="text-5xl md:text-6xl lg:text-7xl font-serif text-[#c8714a] tracking-widest font-normal leading-tight">
+                        VELA VIDA
+                    </h1>
+
+                    <!-- Separador sutil / Eslogan -->
+                    <div class="flex items-center gap-3 my-2 opacity-80">
+                        <span class="w-8 h-[1px] bg-[#8a816d]"></span>
+                        <p class="font-serif italic text-[#6d6655] text-lg">Iluminamos momentos, creamos emociones</p>
+                        <span class="w-8 h-[1px] bg-[#8a816d]"></span>
+                    </div>
+
+                    <!-- Descripción -->
+                    <p class="text-[#6d6655] text-base md:text-lg max-w-lg leading-relaxed font-light">
+                        Velas artesanales decorativas y aromáticas hechas a mano, impregnadas de botánica natural y
+                        personalizadas para cada ocasión especial.
+                    </p>
+                </div>
+                <!-- Botón CTA principal -->
+                <div class="pt-2">
+                    <a href="#contacto"
+                        class="inline-block bg-[#c8714a] hover:bg-[#b05d37] text-[#FAF8F5] font-medium px-9 py-4 rounded-full transition shadow-md shadow-[#c8714a]/20 hover:shadow-lg border border-[#c8714a]">
+                        Ver catálogo de velas
+                    </a>
+                </div>
+
+                <!-- Detalles/Atributos inferiores (Bucaramanga & Personalización) -->
+                <div
+                    class="pt-6 border-t border-[#e2d8ca] w-full flex flex-wrap items-center justify-center lg:justify-start gap-6 text-[#7a7260] text-sm">
+                    <div class="flex items-center gap-2">
+                        <svg class="w-4 h-4 text-[#c8714a]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                        </svg>
+                        <span>Bucaramanga, Santander</span>
+                    </div>
+                    <span class="hidden sm:inline text-[#ccc0af]">|</span>
+                    <div class="flex items-center gap-2">
+                        <svg class="w-4 h-4 text-[#c8714a]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+                        </svg>
+                        <span>Pedidos personalizados</span>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- COLUMNA DERECHA (Contenedor de Imagen de Marca) -->
+            <div class="relative flex justify-center items-center">
+                <div
+                    class="relative w-full max-w-md lg:max-w-none rounded-3xl ">
+                    <img src="https://images.vexels.com/media/users/3/335809/isolated/preview/ea736cacc9e564a26199e3a030d5c8a9-ilustracion-de-un-trazo-de-planta-de-romero.png?w=360"
+                        alt="Hero Vela Vida" class="hidden">
+                    <!-- Reemplazar este src con el asset final o mantener el de la vela -->
+
+                    <!-- Render de la imagen subida -->
+                    <img src="./assets/img1.png" alt="Vela Vida Artesanal"
+                        class="w-full h-auto object-cover rounded-3xl">
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Sección 2: Beneficios -->
+    <section id="beneficios" class="min-h-screen flex items-center justify-center bg-slate-950 px-4">
+        <div class="max-w-4xl text-center">
+            <h2 class="text-3xl font-bold text-white mb-4">¿Por qué elegirnos?</h2>
+            <p class="text-slate-400 mb-12">Rendimiento óptimo y diseño impecable.</p>
+
+            <div class="grid md:grid-cols-3 gap-6 text-left">
+                <div class="bg-slate-900 p-6 rounded-2xl border border-slate-800">
+                    <h3 class="font-semibold text-white mb-2">⚡ Ultra Rápido</h3>
+                    <p class="text-slate-400 text-sm">Cero tiempos de compilación ni dependencias pesadas.</p>
+                </div>
+                <div class="bg-slate-900 p-6 rounded-2xl border border-slate-800">
+                    <h3 class="font-semibold text-white mb-2">🎨 100% Personalizable</h3>
+                    <p class="text-slate-400 text-sm">Modifica colores y tipografías cambiando clases al vuelo.</p>
+                </div>
+                <div class="bg-slate-900 p-6 rounded-2xl border border-slate-800">
+                    <h3 class="font-semibold text-white mb-2">📱 Responsive</h3>
+                    <p class="text-slate-400 text-sm">Diseño adaptado perfectamente a móviles y computadoras.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección 3: Contacto -->
+    <section id="contacto" class="min-h-screen flex items-center justify-center px-4">
+        <div class="max-w-md w-full bg-slate-950 p-8 rounded-2xl border border-slate-800 text-center">
+            <h2 class="text-2xl font-bold text-white mb-2">Contáctanos</h2>
+            <p class="text-slate-400 text-sm mb-6">Déjanos tu correo y te avisamos del lanzamiento.</p>
+
+            <form onsubmit="event.preventDefault(); alert('¡Registrado con éxito!');" class="space-y-4">
+                <input type="email" placeholder="tucorreo@email.com" required
+                    class="w-full bg-slate-900 border border-slate-800 px-4 py-3 rounded-xl text-white focus:outline-none focus:border-blue-500 text-sm">
+                <button type="submit"
+                    class="w-full bg-blue-600 hover:bg-blue-500 text-white font-medium py-3 rounded-xl transition">
+                    Enviar
+                </button>
+            </form>
+        </div>
+    </section>
+
+</body>
+<script>
+    const btn = document.getElementById('mobile-menu-btn');
+    const menu = document.getElementById('mobile-menu');
+    const iconOpen = document.getElementById('menu-icon-open');
+    const iconClose = document.getElementById('menu-icon-close');
+    const links = document.querySelectorAll('.mobile-link');
+
+    function toggleMenu() {
+        menu.classList.toggle('hidden');
+        iconOpen.classList.toggle('hidden');
+        iconClose.classList.toggle('hidden');
+    }
+
+    btn.addEventListener('click', toggleMenu);
+
+    // Cierra el menú móvil al hacer clic en cualquier enlace
+    links.forEach(link => {
+        link.addEventListener('click', () => {
+            if (!menu.classList.contains('hidden')) {
+                toggleMenu();
+            }
+        });
+    });
+</script>
+</html>
