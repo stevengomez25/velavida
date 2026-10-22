@@ -8,68 +8,116 @@
     <!-- Script de Tailwind CSS (Play CDN) -->
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <link rel="icon" type="image/svg+xml" href="./assets/icon.svg">
-
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+        rel="stylesheet">
 </head>
+<style>
+    .playfair-display-font {
+        font-family: "Playfair Display", serif;
+        font-optical-sizing: auto;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 16px;
+    }
+
+    .ticket-badge {
+        position: relative;
+        isolation: isolate;
+        border-radius: 3px;
+    }
+
+    .ticket-badge::before,
+    .ticket-badge::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 14px;
+        height: 22px;
+        background: #FAF8F5;
+        /* Color del fondo de la página */
+        border-radius: 50%;
+        z-index: 1;
+    }
+
+    .ticket-badge::before {
+        left: -7px;
+    }
+
+    .ticket-badge::after {
+        right: -7px;
+    }
+</style>
 
 <body class="bg-[#efe4d9] text-slate-100 font-sans selection:bg-blue-400 selection:text-white">
 
     <!-- Navbar fija con enlaces internos -->
     <!-- Navbar Fija Artesanal & Responsive -->
-<nav class="fixed top-0 left-0 w-full bg-[#f7f4ee]/85 backdrop-blur-md z-50 border-b border-[#e2d8ca]/80 transition-all duration-300">
-    <div class="max-w-6xl mx-auto px-6 h-20 flex items-center justify-between">
-        
-        <!-- Brand / Logo -->
-        <a href="#inicio" class="flex items-center gap-3 group">
-            <img src="https://images.vexels.com/media/users/3/335809/isolated/preview/ea736cacc9e564a26199e3a030d5c8a9-ilustracion-de-un-trazo-de-planta-de-romero.png?w=360" 
-                 alt="Logo Vela Vida" 
-                 class="w-7 h-7 object-contain opacity-80 group-hover:scale-105 transition-transform duration-300">
-            <span class="font-serif text-xl tracking-widest text-[#c8714a] font-normal group-hover:text-[#b05d37] transition-colors">
-                VELA VIDA
-            </span>
-        </a>
+    <nav
+        class="fixed top-0 left-0 w-full bg-[#f7f4ee]/85 backdrop-blur-md z-50 border-b border-[#e2d8ca]/80 transition-all duration-300">
+        <div class="max-w-6xl mx-auto px-6 h-20 flex items-center justify-between">
 
-        <!-- Menú de navegación (Escritorio) -->
-        <div class="hidden md:flex items-center space-x-8 text-sm font-medium text-[#6d6655]">
-            <a href="#inicio" class="hover:text-[#c8714a] transition-colors py-1 relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[1.5px] after:bg-[#c8714a] hover:after:w-full after:transition-all">
+            <!-- Brand / Logo -->
+            <a href="#inicio" class="flex items-center gap-3 group">
+                <img src="https://images.vexels.com/media/users/3/335809/isolated/preview/ea736cacc9e564a26199e3a030d5c8a9-ilustracion-de-un-trazo-de-planta-de-romero.png?w=360"
+                    alt="Logo Vela Vida"
+                    class="w-7 h-7 object-contain opacity-80 group-hover:scale-105 transition-transform duration-300">
+                <span
+                    class="font-serif text-xl tracking-widest text-[#c8714a] font-normal group-hover:text-[#b05d37] transition-colors">
+                    VELA VIDA
+                </span>
+            </a>
+
+            <!-- Menú de navegación (Escritorio) -->
+            <div class="hidden md:flex items-center space-x-8 text-sm font-medium text-[#6d6655]">
+                <a href="#inicio"
+                    class="hover:text-[#c8714a] transition-colors py-1 relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[1.5px] after:bg-[#c8714a] hover:after:w-full after:transition-all">
+                    Productos
+                </a>
+                <a href="#beneficios"
+                    class="hover:text-[#c8714a] transition-colors py-1 relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[1.5px] after:bg-[#c8714a] hover:after:w-full after:transition-all">
+                    ¿Quiénes somos?
+                </a>
+                <a href="#contacto"
+                    class="bg-[#c8714a] hover:bg-[#b05d37] text-[#FAF8F5] px-5 py-2 rounded-full text-xs tracking-wider transition-all shadow-sm hover:shadow-md">
+                    Contacto
+                </a>
+            </div>
+
+            <!-- Botón Menú Hamburguesa (Móvil) -->
+            <button id="mobile-menu-btn" type="button" aria-label="Abrir menú"
+                class="md:hidden p-2 text-[#6d6655] hover:text-[#c8714a] focus:outline-none">
+                <svg id="menu-icon-open" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"
+                        d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+                <svg id="menu-icon-close" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+            </button>
+        </div>
+
+        <!-- Menú Desplegable (Móvil) -->
+        <div id="mobile-menu"
+            class="hidden md:hidden bg-[#f7f4ee] border-b border-[#e2d8ca] px-6 pt-2 pb-6 space-y-4 text-center">
+            <a href="#inicio"
+                class="mobile-link block text-[#6d6655] hover:text-[#c8714a] font-medium py-2 border-b border-[#e2d8ca]/40">
                 Productos
             </a>
-            <a href="#beneficios" class="hover:text-[#c8714a] transition-colors py-1 relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[1.5px] after:bg-[#c8714a] hover:after:w-full after:transition-all">
+            <a href="#beneficios"
+                class="mobile-link block text-[#6d6655] hover:text-[#c8714a] font-medium py-2 border-b border-[#e2d8ca]/40">
                 ¿Quiénes somos?
             </a>
-            <a href="#contacto" class="bg-[#c8714a] hover:bg-[#b05d37] text-[#FAF8F5] px-5 py-2 rounded-full text-xs tracking-wider transition-all shadow-sm hover:shadow-md">
+            <a href="#contacto"
+                class="mobile-link block bg-[#c8714a] text-[#FAF8F5] font-medium py-2.5 rounded-full mt-3">
                 Contacto
             </a>
         </div>
+    </nav>
 
-        <!-- Botón Menú Hamburguesa (Móvil) -->
-        <button id="mobile-menu-btn" 
-                type="button"
-                aria-label="Abrir menú" 
-                class="md:hidden p-2 text-[#6d6655] hover:text-[#c8714a] focus:outline-none">
-            <svg id="menu-icon-open" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M4 6h16M4 12h16M4 18h16"/>
-            </svg>
-            <svg id="menu-icon-close" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M6 18L18 6M6 6l12 12"/>
-            </svg>
-        </button>
-    </div>
-
-    <!-- Menú Desplegable (Móvil) -->
-    <div id="mobile-menu" class="hidden md:hidden bg-[#f7f4ee] border-b border-[#e2d8ca] px-6 pt-2 pb-6 space-y-4 text-center">
-        <a href="#inicio" class="mobile-link block text-[#6d6655] hover:text-[#c8714a] font-medium py-2 border-b border-[#e2d8ca]/40">
-            Productos
-        </a>
-        <a href="#beneficios" class="mobile-link block text-[#6d6655] hover:text-[#c8714a] font-medium py-2 border-b border-[#e2d8ca]/40">
-            ¿Quiénes somos?
-        </a>
-        <a href="#contacto" class="mobile-link block bg-[#c8714a] text-[#FAF8F5] font-medium py-2.5 rounded-full mt-3">
-            Contacto
-        </a>
-    </div>
-</nav>
-
-<!-- Script mínimo para activar el menú hamburguesa en móviles -->
+    <!-- Script mínimo para activar el menú hamburguesa en móviles -->
 
 
     <!-- Sección 1: Inicio / Hero -->
@@ -82,7 +130,7 @@
             <div class="flex flex-col items-center lg:items-start text-center lg:text-left space-y-6 ">
 
                 <!-- Badge / Icono botánico superior -->
-                 <div class="flex flex-col items-center ">
+                <div class="flex flex-col items-center ">
                     <div
                         class="inline-flex items-center justify-center p-3 rounded-full border border-[#c8714a]/30 bg-[#f0e9df]">
                         <img src="https://images.vexels.com/media/users/3/335809/isolated/preview/ea736cacc9e564a26199e3a030d5c8a9-ilustracion-de-un-trazo-de-planta-de-romero.png?w=360"
@@ -143,8 +191,7 @@
 
             <!-- COLUMNA DERECHA (Contenedor de Imagen de Marca) -->
             <div class="relative flex justify-center items-center">
-                <div
-                    class="relative w-full max-w-md lg:max-w-none rounded-3xl ">
+                <div class="relative w-full max-w-md lg:max-w-none rounded-3xl ">
                     <img src="https://images.vexels.com/media/users/3/335809/isolated/preview/ea736cacc9e564a26199e3a030d5c8a9-ilustracion-de-un-trazo-de-planta-de-romero.png?w=360"
                         alt="Hero Vela Vida" class="hidden">
                     <!-- Reemplazar este src con el asset final o mantener el de la vela -->
@@ -159,13 +206,121 @@
     </section>
 
     <!-- Sección 2: Beneficios -->
-    <section id="beneficios" class="min-h-screen flex items-center justify-center text-[#c8714a] px-4">
-        
+    <section id="beneficios" class="min-h-screen py-24 bg-[#f7f4ee] px-6 text-[#6d6655]">
+        <div class="max-w-6xl mx-auto">
+
+            <!-- Cabecera de la Sección -->
+            <div class="text-center mb-16">
+                <span class="text-xs font-serif tracking-widest text-[#c8714a] uppercase block mb-2">VELA VIDA</span>
+                <h2 class="text-6xl md:text-5xl font-serif text-[#c8714a] font-normal tracking-wide">
+                    Nuestros productos
+                </h2>
+                <div class="flex items-center justify-center gap-3 mt-4 opacity-80 grayscale">
+                    <span class="w-12 h-[1px] bg-[#c8714a]/40"></span>
+                    <span class="text-3xl">🌿</span>
+                    <span class="w-12 h-[1px] bg-[#c8714a]/40"></span>
+                </div>
+            </div>
+
+            <!-- Contenedor general de productos -->
+            <div class="space-y-20">
+
+                <!-- PRODUCTO 1: Velas Aromáticas (Texto Izquierda / Imagen Derecha en Desktop) -->
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center p-8 md:p-12 ">
+
+                    <!-- Columna Izquierda: Información -->
+                    <div class="space-y-6">
+                        <h3 class="text-3xl font-serif text-gray-700">Velas aromáticas</h3>
+                        <p class="text-[#6d6655] text-base leading-relaxed font-light">
+                            Velas elaboradas con fragancias cuidadosamente seleccionadas para generar ambientes
+                            relajantes y agradables.
+                        </p>
+
+                        <div class="space-y-2 pt-2 border-t border-[#e2d8ca]">
+                            <h4
+                                class="text-xl font-bold font-serif text-green-900/50 tracking-wider flex items-center gap-2">
+                                <span class="grayscale">🌿</span> Aromas disponibles
+                            </h4>
+                            <p class="text-sm text-[#7a7260] leading-relaxed">
+                                Vainilla • Lavanda • Canela • Coco • Frutos rojos • Jazmín
+                            </p>
+                        </div>
+
+                        <div class="pt-4">
+                            <span
+                                class="playfair-display-font ticket-badge font-serif inline-block bg-[#c8714a] text-[#FAF8F5] px-6 py-2.5 text-sm font-medium shadow-md shadow-[#c8714a]/20">
+                                <span class="mr-2 text-xs opacity-90">✻</span>
+                                Desde $20.000 COP
+                                <span class="ml-2 text-xs opacity-90">✻</span>
+                            </span>
+                        </div>
+                    </div>
+
+                    <!-- Columna Derecha: Imagen / Tarjeta Visual -->
+                    <div class="flex justify-center">
+                        <div
+                            class="h-125 w-full max-w-sm rounded-t-full overflow-hidden shadow-md border border-[#e2d8ca]/80 bg-[#f0e9df] ">
+                            <img src="./assets/img3.png" alt="Vela aromática de vainilla"
+                                class="w-full h-full object-cover hover:scale-105 transition-transform duration-500 ">
+                        </div>
+                    </div>
+
+                </div>
+                <div class="flex items-center justify-center gap-3 mt-4 opacity-80 grayscale">
+                    <span class="w-12 h-[1px] bg-[#c8714a]/40"></span>
+                    <span class="text-3xl">🌿</span>
+                    <span class="w-12 h-[1px] bg-[#c8714a]/40"></span>
+                </div>
+                <!-- PRODUCTO 2: Velas Decorativas (Imagen Izquierda / Texto Derecha en Desktop) -->
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center p-8 md:p-12 rounded-3xl ">
+
+                    <!-- Columna Izquierda: Imagen / Tarjeta Visual -->
+                    <div class="relative flex justify-center order-2 lg:order-1">
+                        <div
+                            class="h-125 w-full max-w-sm rounded-t-full overflow-hidden shadow-md border border-[#e2d8ca]/80 bg-[#f0e9df]">
+                            <img src="./assets/img2.jpg" alt="Velas decorativas artesanales"
+                                class="w-full h-full object-cover hover:scale-105 transition-transform duration-500 ">
+                        </div>
+                    </div>
+
+                    <!-- Columna Derecha: Información -->
+                    <div class="space-y-6 order-1 lg:order-2">
+                        <h3 class="text-3xl font-serif text-gray-700">Velas decorativas</h3>
+                        <p class="text-[#6d6655] text-base leading-relaxed font-light">
+                            Diseños exclusivos para decorar espacios interiores, eventos especiales y celebraciones con
+                            un toque único.
+                        </p>
+
+                        <div class="space-y-2 pt-2 border-t border-[#e2d8ca]">
+                            <h4
+                                class="text-xl font-bold font-serif text-green-900/50 tracking-wider flex items-center gap-2">
+                                <span class="grayscale">🌿</span> Características
+                            </h4>
+                            <p class="text-sm text-[#7a7260] leading-relaxed">
+                                Diseños personalizados • Diferentes tamaños • Variedad de colores • Elaboración
+                                artesanal
+                            </p>
+                        </div>
+
+                        <div class="pt-4">
+                            <span
+                                class="playfair-display-font ticket-badge font-serif inline-block bg-[#c8714a] text-[#FAF8F5] px-6 py-2.5 text-sm font-medium shadow-md shadow-[#c8714a]/20">
+                                <span class="mr-2 text-xs opacity-90">✻</span>
+                                Desde $25.000 COP
+                                <span class="ml-2 text-xs opacity-90">✻</span>
+                            </span>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
     </section>
 
     <!-- Sección 3: Contacto -->
     <section id="contacto" class="min-h-screen flex items-center justify-center px-4 bg-[#b05d37]">
-        
+
     </section>
 
 </body>
@@ -193,4 +348,5 @@
         });
     });
 </script>
+
 </html>
