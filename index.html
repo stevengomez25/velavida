@@ -10,6 +10,7 @@
     <link rel="icon" type="image/svg+xml" href="./assets/icon.svg">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
         rel="stylesheet">
 </head>
@@ -121,13 +122,11 @@
 
 
     <!-- Sección 1: Inicio / Hero -->
-    <section id="inicio" class="min-h-screen flex items-center justify-center pt-20 pb-12 px-6 bg-[#f7f4ee] bg-[url('./assets/imgbg.png')] bg-center bg-no-repeat bg-blend-luminosity
-
-">
+    <section id="inicio" class="min-h-screen flex items-center justify-center pt-20 pb-12 px-6 bg-[#f7f4ee] bg-[url('./assets/imgbg.png')] bg-center bg-no-repeat bg-blend-luminosity">
         <div class="max-w-6xl w-full grid grid-cols-1 lg:grid-cols-2 gap-12 items-center ">
 
             <!-- COLUMNA IZQUIERDA (Adaptada con estilos congruentes a la imagen) -->
-            <div class="flex flex-col items-center lg:items-start text-center lg:text-left space-y-6 ">
+            <div class="flex flex-col items-center lg:items-start text-center lg:text-left space-y-6 " data-aos="fade-right" data-aos-duration="1000">
 
                 <!-- Badge / Icono botánico superior -->
                 <div class="flex flex-col items-center ">
@@ -190,7 +189,7 @@
             </div>
 
             <!-- COLUMNA DERECHA (Contenedor de Imagen de Marca) -->
-            <div class="relative flex justify-center items-center">
+            <div class="relative flex justify-center items-center" data-aos="fade-left" data-aos-duration="1000">
                 <div class="relative w-full max-w-md lg:max-w-none rounded-3xl ">
                     <img src="https://images.vexels.com/media/users/3/335809/isolated/preview/ea736cacc9e564a26199e3a030d5c8a9-ilustracion-de-un-trazo-de-planta-de-romero.png?w=360"
                         alt="Hero Vela Vida" class="hidden">
@@ -210,7 +209,7 @@
         <div class="max-w-6xl mx-auto">
 
             <!-- Cabecera de la Sección -->
-            <div class="text-center mb-16">
+            <div class="text-center mb-16" data-aos="fade-up">
                 <span class="text-xs font-serif tracking-widest text-[#c8714a] uppercase block mb-2">VELA VIDA</span>
                 <h2 class="text-6xl md:text-5xl font-serif text-[#c8714a] font-normal tracking-wide">
                     Nuestros productos
@@ -227,7 +226,7 @@
 
                 <!-- PRODUCTO 1: Velas Aromáticas (Texto Izquierda / Imagen Derecha en Desktop) -->
                 <div
-                    class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center p-8 md:p-12 bg-[url('./assets/bg3.png')] bg-size-[200px] bg-no-repeat bg-top ">
+                    class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center p-8 md:p-12 bg-[url('./assets/bg3.png')] md:bg-size-[200px] bg-no-repeat bg-center md:bg-top " data-aos="fade-up" data-aos-delay="100">
 
                     <!-- Columna Izquierda: Información -->
                     <div class="space-y-6">
@@ -263,7 +262,7 @@
                     </div>
 
                     <!-- Columna Derecha: Imagen / Tarjeta Visual -->
-                    <div class="flex justify-center">
+                    <div class="flex justify-center" data-aos="zoom-in" data-aos-delay="200">
                         <div
                             class="h-125 w-full max-w-sm rounded-t-full overflow-hidden shadow-md border border-[#e2d8ca]/80 bg-[#f0e9df] ">
                             <img src="./assets/img3.png" alt="Vela aromática de vainilla"
@@ -279,10 +278,10 @@
                 </div>
                 <!-- PRODUCTO 2: Velas Decorativas (Imagen Izquierda / Texto Derecha en Desktop) -->
                 <div
-                    class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center p-8 md:p-12 rounded-3xl bg-[url('./assets/bg4.png')] bg-size-[200px] bg-no-repeat bg-top ">
+                    class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center p-8 md:p-12 rounded-3xl bg-[url('./assets/bg4.png')] md:bg-size-[200px]  bg-no-repeat bg-center md:bg-top " data-aos="fade-up" data-aos-delay="100">
 
                     <!-- Columna Izquierda: Imagen / Tarjeta Visual -->
-                    <div class="relative flex justify-center order-2 lg:order-1">
+                    <div class="relative flex justify-center order-2 lg:order-1" data-aos="zoom-in" data-aos-delay="200">
                         <div
                             class="h-125 w-full max-w-sm rounded-t-full overflow-hidden shadow-md border border-[#e2d8ca]/80 bg-[#f0e9df]">
                             <img src="./assets/img2.jpg" alt="Velas decorativas artesanales"
@@ -332,141 +331,148 @@
 
     <!-- Sección 3: Contacto -->
     <section id="contacto" class="min-h-screen py-24 flex flex-col items-center justify-center px-4 ">
-        <div class="max-w-6xl w-full mx-auto space-y-16">
+    <div class="max-w-6xl w-full mx-auto space-y-16">
 
-            <!-- Cabecera de la Sección -->
-            <div class="text-center space-y-3 ">
-                <div class="inline-block border-b border-[#f7f4ee]/40 pb-2 ">
-                    <span class="font-serif text-4xl tracking-widest text-black uppercase block">VELA VIDA</span>
-                    <span class="text-[10px] text-black tracking-widest uppercase">Velas que acompañan <br/>historias</span>
-                </div>
-                <div class="flex items-center justify-center opacity-80 ">
-                    <span class="w-20 h-[1px] bg-[#c8714a]/40"></span>
-                    <span class="text-3xl text-green-800/40">◆</span>
-                    <span class="w-20 h-[1px] bg-[#c8714a]/40"></span>
-                </div>
-                <h2 class="text-4xl md:text-5xl lg:text-6xl font-serif text-[#b05d37] font-normal tracking-wide">
-                    Productos para momentos especiales
-                </h2>
+        <!-- Cabecera de la Sección -->
+        <div class="text-center space-y-3 " data-aos="fade-up">
+            <div class="inline-block border-b border-[#f7f4ee]/40 pb-2 ">
+                <span class="font-serif text-4xl tracking-widest text-black uppercase block">VELA VIDA</span>
+                <span class="text-[10px] text-black tracking-widest uppercase">Velas que acompañan <br />historias</span>
             </div>
+            <div class="flex items-center justify-center opacity-80 ">
+                <span class="w-20 h-[1px] bg-[#c8714a]/40"></span>
+                <span class="text-3xl text-green-800/40">◆</span>
+                <span class="w-20 h-[1px] bg-[#c8714a]/40"></span>
+            </div>
+            <h2 class="text-4xl md:text-5xl lg:text-6xl font-serif text-[#b05d37] font-normal tracking-wide">
+                Productos para momentos especiales
+            </h2>
+        </div>
 
-            <!-- Contenedor general de bloques -->
-            <div class="space-y-12">
+        <!-- Contenedor general de bloques -->
+        <div class="space-y-12">
 
-                <!-- BLOQUE 1: Velas para eventos (Texto Izquierda / Imagen Derecha) -->
-                <div class="flex justify-center items-center  text-[#6d6655] p-8 md:p-12 ">
+            <!-- BLOQUE 1: Velas para eventos (Texto Izquierda / Imagen Derecha) -->
+            <div class="flex flex-col lg:flex-row justify-center items-center text-[#6d6655] p-4 md:p-12 gap-8 lg:gap-0" data-aos="fade-right">
 
-                    <!-- Columna Izquierda: Contenido -->
-                    <div class="space-y-6 rounded-3xl border-[#b05d37] border w-1/2 [corner-shape:scoop]  p-4 pl-8">
-                        <div
-                            class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#f0e9df] border border-[#c8714a]/20 text-[#c8714a] text-xs font-semibold playfair-display-font ticket-badge">
-                            <span>🕯️</span> Velas para eventos
-                        </div>
-
-                        <h3 class="flex items-center text-3xl font-serif text-black "><img class=" h-10 px-2"
-                                src="./assets/candleicon.png" alt="">Velas para eventos</h3>
-
-                        <p class="text-[#6d6655] text-base leading-relaxed font-light">
-                            Productos diseñados para matrimonios, cumpleaños, baby showers, bautizos y eventos
-                            corporativos.
-                        </p>
-
-                        <div class="space-y-2 pt-3 border-t border-[#e2d8ca]">
-                            <p class="text-sm text-[#7a7260] leading-relaxed">
-                                <strong class="text-[#c8714a]">Personalización de etiquetas</strong><br>
-                                Empaque decorativo • Producción por cantidades
-                            </p>
-                        </div>
-
-                        <div class="pt-2">
-                            <span
-                                class="inline-block bg-[#c8714a] text-[#FAF8F5] px-6 py-2.5 rounded-full text-sm font-medium shadow-md playfair-display-font ticket-badge">
-                                <span class="mr-2 text-xs opacity-90">✻</span>
-                                Desde $15.000 COP
-                                <span class="mr-2 text-xs opacity-90">✻</span>
-                            </span>
-                        </div>
-                    </div>
-
-                    <!-- Columna Derecha: Imagen Ilustrativa -->
-                    <div class="relative flex justify-center w-1/2  ">
-                        <div
-                            class="w-full max-w-md rounded-tr-[150px]  overflow-hidden shadow-md border border-[#b05d37] bg-[#f0e9df]">
-                            <img src="./assets/img4.png" alt="Velas para eventos y bodas"
-                                class="w-full h-100 object-cover hover:scale-105 transition-transform duration-500">
-                        </div>
-                    </div>
-
-                </div>
-                <div class="flex items-center justify-center gap-3 mt-4 opacity-80 grayscale ">
-                    <span class="w-120 h-[1px] bg-[#c8714a]/40"></span>
-                    <span class="text-3xl">🌿</span>
-                    <span class="w-120 h-[1px] bg-[#c8714a]/40"></span>
-                </div>
-                <!-- BLOQUE 2: Regalos personalizados (Imagen Izquierda / Texto Derecha en Desktop) -->
-                <div class="flex justify-center items-center  text-[#6d6655] p-8 md:p-12 ">
-
-                    <!-- Columna Izquierda: Imagen (Orden 2 en móvil, 1 en escritorio) -->
-                    <div class="relative flex justify-center w-1/2  order-2 lg:order-1">
-                        <div
-                            class="w-full max-w-md rounded-tl-[150px]  overflow-hidden shadow-md border border-[#b05d37] bg-[#f0e9df]">
-                            <img src="./assets/img5.png" alt="Regalos personalizados Vela Vida"
-                                class="w-full h-80 object-cover hover:scale-105 transition-transform duration-500">
-                        </div>
-                    </div>
-
-                    <!-- Columna Derecha: Contenido (Orden 1 en móvil, 2 en escritorio) -->
+                <!-- Columna Izquierda: Contenido -->
+                <div class="space-y-6 rounded-3xl border-[#b05d37] border w-full lg:w-1/2 [corner-shape:scoop] p-4 pl-8">
                     <div
-                        class="space-y-6 rounded-3xl border-[#b05d37] border w-1/2 [corner-shape:scoop]  p-4 pl-8 order-1 lg:order-2">
-                        <div
-                            class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#f0e9df] border border-[#c8714a]/20 text-[#c8714a] text-xs font-semibold playfair-display-font ticket-badge">
-                            <span>🎁</span> Regalos corporativos y personales
-                        </div>
-
-                        <h3 class="flex items-center text-3xl font-serif text-black "><img class=" h-10 px-2"
-                                src="./assets/gifticon.png" alt="">Regalos personalizados</h3>
-
-                        <p class="text-[#6d6655] text-base leading-relaxed font-light">
-                            Combinaciones de velas con empaques especiales para obsequios corporativos y personales.
-                        </p>
-
-                        <div class="pt-2">
-                            <span
-                                class="inline-block bg-[#c8714a] text-[#FAF8F5] px-6 py-2.5 rounded-full text-sm font-medium shadow-md playfair-display-font ticket-badge">
-                                <span class="mr-2 text-xs opacity-90">✻</span>
-                                Desde $35.000 COP
-                                <span class="mr-2 text-xs opacity-90">✻</span>
-                            </span>
-                        </div>
+                        class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#f0e9df] border border-[#c8714a]/20 text-[#c8714a] text-xs font-semibold playfair-display-font ticket-badge">
+                        <span>🕯️</span> Velas para eventos
                     </div>
 
+                    <h3 class="flex items-center text-3xl font-serif text-black "><img class=" h-10 px-2"
+                            src="./assets/candleicon.png" alt="">Velas para eventos</h3>
+
+                    <p class="text-[#6d6655] text-base leading-relaxed font-light">
+                        Productos diseñados para matrimonios, cumpleaños, baby showers, bautizos y eventos
+                        corporativos.
+                    </p>
+
+                    <div class="space-y-2 pt-3 border-t border-[#e2d8ca]">
+                        <p class="text-sm text-[#7a7260] leading-relaxed">
+                            <strong class="text-[#c8714a]">Personalización de etiquetas</strong><br>
+                            Empaque decorativo • Producción por cantidades
+                        </p>
+                    </div>
+
+                    <div class="pt-2">
+                        <span
+                            class="inline-block bg-[#c8714a] text-[#FAF8F5] px-6 py-2.5 rounded-full text-sm font-medium shadow-md playfair-display-font ticket-badge">
+                            <span class="mr-2 text-xs opacity-90">✻</span>
+                            Desde $15.000 COP
+                            <span class="mr-2 text-xs opacity-90">✻</span>
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Columna Derecha: Imagen Ilustrativa -->
+                <div class="relative flex justify-center w-full lg:w-1/2">
+                    <div
+                        class="w-full max-w-md rounded-tr-[150px] overflow-hidden shadow-md border border-[#b05d37] bg-[#f0e9df]">
+                        <img src="./assets/img4.png" alt="Velas para eventos y bodas"
+                            class="w-full h-80 lg:h-96 object-cover hover:scale-105 transition-transform duration-500">
+                    </div>
                 </div>
 
             </div>
+            <div class="flex items-center justify-center gap-3 mt-4 opacity-80 grayscale ">
+                <span class="w-20 md:w-120 h-[1px] bg-[#c8714a]/40"></span>
+                <span class="text-3xl">🌿</span>
+                <span class="w-20 md:w-120 h-[1px] bg-[#c8714a]/40"></span>
+            </div>
+            <!-- BLOQUE 2: Regalos personalizados (Imagen Izquierda / Texto Derecha en Desktop) -->
+            <div class="flex flex-col lg:flex-row justify-center items-center text-[#6d6655] p-4 md:p-12 gap-8 lg:gap-0" data-aos="fade-left">
 
-            <!-- Pie de Sección -->
-            <div class="text-center pt-6">
-                <div
-                    class="inline-flex items-center gap-3 text-[#c8714a] font-serif italic text-lg tracking-wide opacity-90">
-                    <div class="flex items-center justify-center gap-3 mt-4 opacity-80 grayscale ">
-                        <span class="w-12 h-[1px] bg-[#c8714a]/40"></span>
-                        <span class="text-3xl">🌿</span>
-                        <span class="w-12 h-[1px] bg-[#c8714a]/40"></span>
-                    </div>
-                    <span>Personaliza tu ocasión</span>
-                    <div class="flex items-center justify-center gap-3 mt-4 opacity-80 grayscale ">
-                        <span class="w-12 h-[1px] bg-[#c8714a]/40"></span>
-                        <span class="text-3xl">🌿</span>
-                        <span class="w-12 h-[1px] bg-[#c8714a]/40"></span>
+                <!-- Columna Izquierda: Imagen (Orden 2 en móvil, 1 en escritorio) -->
+                <div class="relative flex justify-center w-full lg:w-1/2 order-2 lg:order-1">
+                    <div
+                        class="w-full max-w-md rounded-tl-[150px] overflow-hidden shadow-md border border-[#b05d37] bg-[#f0e9df]">
+                        <img src="./assets/img5.png" alt="Regalos personalizados Vela Vida"
+                            class="w-full h-80 object-cover hover:scale-105 transition-transform duration-500">
                     </div>
                 </div>
+
+                <!-- Columna Derecha: Contenido (Orden 1 en móvil, 2 en escritorio) -->
+                <div
+                    class="space-y-6 rounded-3xl border-[#b05d37] border w-full lg:w-1/2 [corner-shape:scoop] p-4 pl-8 order-1 lg:order-2">
+                    <div
+                        class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#f0e9df] border border-[#c8714a]/20 text-[#c8714a] text-xs font-semibold playfair-display-font ticket-badge">
+                        <span>🎁</span> Regalos corporativos y personales
+                    </div>
+
+                    <h3 class="flex items-center text-3xl font-serif text-black "><img class=" h-10 px-2"
+                            src="./assets/gifticon.png" alt="">Regalos personalizados</h3>
+
+                    <p class="text-[#6d6655] text-base leading-relaxed font-light">
+                        Combinaciones de velas con empaques especiales para obsequios corporativos y personales.
+                    </p>
+
+                    <div class="pt-2">
+                        <span
+                            class="inline-block bg-[#c8714a] text-[#FAF8F5] px-6 py-2.5 rounded-full text-sm font-medium shadow-md playfair-display-font ticket-badge">
+                            <span class="mr-2 text-xs opacity-90">✻</span>
+                            Desde $35.000 COP
+                            <span class="mr-2 text-xs opacity-90">✻</span>
+                        </span>
+                    </div>
+                </div>
+
             </div>
 
         </div>
-    </section>
+
+        <!-- Pie de Sección -->
+        <div class="text-center pt-6" data-aos="fade-in">
+            <div
+                class="inline-flex flex-col md:flex-row items-center gap-3 text-[#c8714a] font-serif italic text-lg tracking-wide opacity-90">
+                <div class="flex items-center justify-center gap-3 mt-4 opacity-80 grayscale ">
+                    <span class="w-12 h-[1px] bg-[#c8714a]/40"></span>
+                    <span class="text-3xl">🌿</span>
+                    <span class="w-12 h-[1px] bg-[#c8714a]/40"></span>
+                </div>
+                <span>Personaliza tu ocasión</span>
+                <div class="flex items-center justify-center gap-3 mt-4 opacity-80 grayscale ">
+                    <span class="w-12 h-[1px] bg-[#c8714a]/40"></span>
+                    <span class="text-3xl">🌿</span>
+                    <span class="w-12 h-[1px] bg-[#c8714a]/40"></span>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
 
 </body>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script>
+    AOS.init({
+        duration: 900,  // Duración de la animación en milisegundos
+        once: true,     // Animación ocurre solo la primera vez que se hace scroll
+        offset: 100,    // Margen antes de que dispare la animación
+    });
+
     const btn = document.getElementById('mobile-menu-btn');
     const menu = document.getElementById('mobile-menu');
     const iconOpen = document.getElementById('menu-icon-open');
