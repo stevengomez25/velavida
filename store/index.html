@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> 🔥 Tienda | Vela Vida 🔥 </title>
+    <!-- Script de Tailwind CSS (Play CDN) -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="icon" type="image/svg+xml" href="../assets/icon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+        rel="stylesheet">
+</head>
+<style>
+    .playfair-display-font {
+        font-family: "Playfair Display", serif;
+        font-optical-sizing: auto;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 16px;
+    }
+
+    .ticket-badge {
+        position: relative;
+        isolation: isolate;
+        border-radius: 3px;
+    }
+
+    .ticket-badge::before,
+    .ticket-badge::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 14px;
+        height: 22px;
+        background: #FAF8F5;
+        border-radius: 50%;
+        z-index: 1;
+    }
+
+    .ticket-badge::before {
+        left: -7px;
+    }
+
+    .ticket-badge::after {
+        right: -7px;
+    }
+</style>
+
+<body class="bg-[#f7f4ee] text-slate-100 font-sans selection:bg-blue-400 selection:text-white">
+
+    <!-- Navbar fija de la tienda -->
+    <nav
+        class="fixed top-0 left-0 w-full bg-[#f7f4ee]/85 backdrop-blur-md z-50 border-b border-[#e2d8ca]/80 transition-all duration-300">
+        <div class="max-w-6xl mx-auto px-6 h-20 flex items-center justify-between">
+
+            <!-- Brand / Logo -->
+            <a href="index.html" class="flex items-center gap-3 group">
+                <img src="../assets/mainicon.png" alt="Logo Vela Vida"
+                    class="w-7 h-7 object-contain opacity-80 group-hover:scale-105 transition-transform duration-300">
+                <span
+                    class="font-serif text-xl tracking-widest text-[#c8714a] font-normal group-hover:text-[#b05d37] transition-colors">
+                    VELA VIDA
+                </span>
+            </a>
+
+            <!-- Menú de navegación (Escritorio) -->
+            <div class="hidden md:flex items-center space-x-8 text-sm font-medium text-[#6d6655]">
+                <a href="../index.html" class="hover:text-[#c8714a] transition-colors py-1">Inicio</a>
+                <a href="#catalogo" class="hover:text-[#c8714a] transition-colors py-1">Catálogo</a>
+                <a href="../index.html#contacto"
+                    class="playfair-display-font ticket-badge bg-[#c8714a] hover:bg-[#b05d37] text-[#FAF8F5] px-5 py-2 rounded-full text-xs tracking-wider transition-all shadow-sm">
+                    ♥ ¡CONTACTANOS! ♥
+                </a>
+            </div>
+
+            <!-- Botón Menú Hamburguesa (Móvil) -->
+            <button id="mobile-menu-btn" type="button" aria-label="Abrir menú"
+                class="md:hidden p-2 text-[#6d6655] hover:text-[#c8714a] focus:outline-none">
+                <svg id="menu-icon-open" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"
+                        d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+                <svg id="menu-icon-close" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+            </button>
+        </div>
+
+        <!-- Menú Desplegable (Móvil) -->
+        <div id="mobile-menu"
+            class="hidden md:hidden bg-[#f7f4ee] border-b border-[#e2d8ca] px-6 pt-2 pb-6 space-y-4 text-center">
+            <a href="../index.html"
+                class="mobile-link block text-[#6d6655] hover:text-[#c8714a] font-medium py-2 border-b border-[#e2d8ca]/40">Inicio</a>
+            <a href="#catalogo"
+                class="mobile-link block text-[#6d6655] hover:text-[#c8714a] font-medium py-2 border-b border-[#e2d8ca]/40">Catálogo</a>
+            <a href="../index.html#contacto"
+                class="mobile-link block bg-[#c8714a] text-[#FAF8F5] font-medium py-2.5 rounded-full mt-3">Contacto</a>
+        </div>
+    </nav>
+
+    <!-- Header de la Tienda -->
+    <header class="pt-32 pb-12 px-6 text-center" data-aos="fade-up">
+        <div class="flex items-center justify-center mb-4">
+            <img src="../assets/mainicon.png" class="w-20 h-20 object-contain opacity-80" alt="Icono Vela Vida">
+        </div>
+        <span class="text-xs font-serif tracking-widest text-[#c8714a] uppercase block mb-2">TIENDA ONLINE</span>
+        <h1 class="text-4xl md:text-6xl font-serif text-[#b05d37] font-normal tracking-wide">
+            Nuestras Colecciones
+        </h1>
+        <p class="text-[#6d6655] max-w-xl mx-auto mt-4 text-base font-light">
+            Explora nuestra selección de velas artesanales, aromáticas y decorativas diseñadas para iluminar cada rincón
+            de tu hogar.
+        </p>
+        <div class="flex items-center justify-center gap-3 mt-6 opacity-80">
+            <span class="w-20 h-[1px] bg-[#c8714a]/40"></span>
+            <img src="../assets/mainicon.png" alt="Logo Vela Vida"
+                class="w-7 h-7 object-contain opacity-80 group-hover:scale-105 transition-transform duration-300">
+            <span class="w-20 h-[1px] bg-[#c8714a]/40"></span>
+        </div>
+    </header>
+
+    <!-- Sección: Catálogo / E-commerce Grid -->
+    <main id="catalogo" class="max-w-7xl mx-auto px-6 py-12">
+
+        <!-- Filtros de Categorías (Opcional visual) -->
+        <div class="flex flex-wrap justify-center gap-4 mb-12" data-aos="fade-up">
+            <button
+                class="px-6 py-2 rounded-full bg-[#c8714a] text-white text-sm font-medium shadow-sm transition-all">Todos</button>
+            <button
+                class="px-6 py-2 rounded-full bg-[#f0e9df] text-[#6d6655] hover:bg-[#c8714a] hover:text-white text-sm font-medium border border-[#e2d8ca] transition-all">Aromáticas</button>
+            <button
+                class="px-6 py-2 rounded-full bg-[#f0e9df] text-[#6d6655] hover:bg-[#c8714a] hover:text-white text-sm font-medium border border-[#e2d8ca] transition-all">Decorativas</button>
+            <button
+                class="px-6 py-2 rounded-full bg-[#f0e9df] text-[#6d6655] hover:bg-[#c8714a] hover:text-white text-sm font-medium border border-[#e2d8ca] transition-all">Para
+                Eventos</button>
+        </div>
+
+        <!-- Grid de Productos (4 columnas en Desktop, 2 en Tablet, 1 en Mobile) -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+
+            <!-- Producto 1 -->
+            <div class="bg-[#FAF8F5] rounded-3xl overflow-hidden border border-[#e2d8ca] shadow-sm flex flex-col justify-between group"
+                data-aos="fade-up" data-aos-delay="100">
+                <div class="relative h-72 overflow-hidden bg-[#f0e9df]">
+                    <img src="../assets/img3.png" alt="Vela Aromática Vainilla"
+                        class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    <span
+                        class="absolute top-4 left-4 bg-[#c8714a] text-white text-[10px] uppercase tracking-wider px-3 py-1 rounded-full">Aromática</span>
+                </div>
+                <div class="p-6 space-y-3 flex-grow flex flex-col justify-between">
+                    <div>
+                        <h3 class="font-serif text-xl text-[#333333] group-hover:text-[#c8714a] transition-colors">Vela
+                            Aromática Vainilla</h3>
+                        <p class="text-xs text-[#6d6655] mt-1 font-light">Fragancia suave y relajante con notas de
+                            vainilla natural.</p>
+                    </div>
+                    <div class="pt-4 border-t border-[#e2d8ca] flex items-center justify-between">
+                        <span class="font-serif text-lg font-bold text-[#b05d37]">$20.000 COP</span>
+                        <a href="https://wa.me/573000000000?text=Hola,%20estoy%20interesado%20en%20la%20Vela%20Aromática%20Vainilla"
+                            target="_blank"
+                            class="bg-[#8a9a86] hover:bg-[#72816f] text-white px-4 py-2 rounded-full text-xs font-medium transition-colors">
+                            Comprar
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Producto 2 -->
+            <div class="bg-[#FAF8F5] rounded-3xl overflow-hidden border border-[#e2d8ca] shadow-sm flex flex-col justify-between group"
+                data-aos="fade-up" data-aos-delay="200">
+                <div class="relative h-72 overflow-hidden bg-[#f0e9df]">
+                    <img src="../assets/img2.jpg" alt="Vela Decorativa Escultural"
+                        class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    <span
+                        class="absolute top-4 left-4 bg-[#8a9a86] text-white text-[10px] uppercase tracking-wider px-3 py-1 rounded-full">Decorativa</span>
+                </div>
+                <div class="p-6 space-y-3 flex-grow flex flex-col justify-between">
+                    <div>
+                        <h3 class="font-serif text-xl text-[#333333] group-hover:text-[#c8714a] transition-colors">Vela
+                            Decorativa Escultural</h3>
+                        <p class="text-xs text-[#6d6655] mt-1 font-light">Diseño exclusivo ideal para dar un toque
+                            moderno y estético a tus espacios.</p>
+                    </div>
+                    <div class="pt-4 border-t border-[#e2d8ca] flex items-center justify-between">
+                        <span class="font-serif text-lg font-bold text-[#b05d37]">$25.000 COP</span>
+                        <a href="https://wa.me/573000000000?text=Hola,%20estoy%20interesado%20en%20la%20Vela%20Decorativa%20Escultural"
+                            target="_blank"
+                            class="bg-[#8a9a86] hover:bg-[#72816f] text-white px-4 py-2 rounded-full text-xs font-medium transition-colors">
+                            Comprar
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Producto 3 -->
+            <div class="bg-[#FAF8F5] rounded-3xl overflow-hidden border border-[#e2d8ca] shadow-sm flex flex-col justify-between group"
+                data-aos="fade-up" data-aos-delay="300">
+                <div class="relative h-72 overflow-hidden bg-[#f0e9df]">
+                    <img src="../assets/img4.png" alt="Set de Velas para Bodas"
+                        class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    <span
+                        class="absolute top-4 left-4 bg-[#b05d37] text-white text-[10px] uppercase tracking-wider px-3 py-1 rounded-full">Eventos</span>
+                </div>
+                <div class="p-6 space-y-3 flex-grow flex flex-col justify-between">
+                    <div>
+                        <h3 class="font-serif text-xl text-[#333333] group-hover:text-[#c8714a] transition-colors">Velas
+                            para Eventos (Unidad)</h3>
+                        <p class="text-xs text-[#6d6655] mt-1 font-light">Personalizadas con etiquetas corporativas o
+                            recuerdos para bodas y bautizos.</p>
+                    </div>
+                    <div class="pt-4 border-t border-[#e2d8ca] flex items-center justify-between">
+                        <span class="font-serif text-lg font-bold text-[#b05d37]">$15.000 COP</span>
+                        <a href="https://wa.me/573000000000?text=Hola,%20estoy%20interesado%20en%20las%20Velas%20para%20Eventos"
+                            target="_blank"
+                            class="bg-[#8a9a86] hover:bg-[#72816f] text-white px-4 py-2 rounded-full text-xs font-medium transition-colors">
+                            Comprar
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Producto 4 -->
+            <div class="bg-[#FAF8F5] rounded-3xl overflow-hidden border border-[#e2d8ca] shadow-sm flex flex-col justify-between group"
+                data-aos="fade-up" data-aos-delay="400">
+                <div class="relative h-72 overflow-hidden bg-[#f0e9df]">
+                    <img src="../assets/img5.png" alt="Caja de Regalo Personalizada"
+                        class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    <span
+                        class="absolute top-4 left-4 bg-[#8a9a86] text-white text-[10px] uppercase tracking-wider px-3 py-1 rounded-full">Regalos</span>
+                </div>
+                <div class="p-6 space-y-3 flex-grow flex flex-col justify-between">
+                    <div>
+                        <h3 class="font-serif text-xl text-[#333333] group-hover:text-[#c8714a] transition-colors">Caja
+                            Regalo Personalizada</h3>
+                        <p class="text-xs text-[#6d6655] mt-1 font-light">Combinación de vela y figura decorativa en
+                            empaque especial para obsequio.</p>
+                    </div>
+                    <div class="pt-4 border-t border-[#e2d8ca] flex items-center justify-between">
+                        <span class="font-serif text-lg font-bold text-[#b05d37]">$35.000 COP</span>
+                        <a href="https://wa.me/573000000000?text=Hola,%20estoy%20interesado%20en%20la%20Caja%20Regalo%20Personalizada"
+                            target="_blank"
+                            class="bg-[#8a9a86] hover:bg-[#72816f] text-white px-4 py-2 rounded-full text-xs font-medium transition-colors">
+                            Comprar
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Footer Idéntico al Index -->
+    <footer
+        class="w-full bg-[#8a9a86] text-[#FAF8F5] py-8 px-6 rounded-t-3xl shadow-md space-y-6 ring-5 ring-green-300/10 ring-inset mt-24"
+        data-aos="fade-up">
+        <div class="max-w-6xl mx-auto">
+
+            <!-- Grid de Canales de Contacto -->
+            <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-6 text-center text-xs">
+
+                <!-- Correo -->
+                <a href="mailto:velavida@gmail.com"
+                    class="flex flex-col saturate-25 hover:saturate-100 items-center justify-center space-y-1.5 p-2 rounded-xl hover:bg-[#FAF8F5]/10 transition-all group">
+                    <span class="text-2xl group-hover:scale-110 transition-transform"><img src="../assets/emailicon.png"
+                            alt="" class="w-15"></span>
+                    <span class="font-medium">Correo electrónico</span>
+                    <span class="text-[10px] opacity-80 truncate max-w-full">velavida@gmail.com</span>
+                </a>
+
+                <!-- WhatsApp -->
+                <a href="https://wa.me/573000000000" target="_blank"
+                    class="flex flex-col saturate-25 hover:saturate-100 items-center justify-center space-y-1.5 p-2 rounded-xl hover:bg-[#FAF8F5]/10 transition-all group">
+                    <span class="text-2xl group-hover:scale-110 transition-transform"><img
+                            src="../assets/whatsappicon.png" alt="" class="w-15"></span>
+                    <span class="font-medium">WhatsApp</span>
+                    <span class="text-[10px] opacity-80 truncate max-w-full">+57 300 000 0000</span>
+                </a>
+
+                <!-- Instagram -->
+                <a href="#"
+                    class="flex flex-col saturate-25 hover:saturate-100 items-center justify-center space-y-1.5 p-2 rounded-xl hover:bg-[#FAF8F5]/10 transition-all group">
+                    <span class="text-2xl group-hover:scale-110 transition-transform"><img
+                            src="../assets/instagramicon.png" alt="" class="w-15"></span>
+                    <span class="font-medium">Instagram</span>
+                    <span class="text-[10px] opacity-80 truncate max-w-full">@velavidaoficial</span>
+                </a>
+
+                <!-- Facebook -->
+                <a href="#"
+                    class="flex flex-col saturate-25 hover:saturate-100 items-center justify-center space-y-1.5 p-2 rounded-xl hover:bg-[#FAF8F5]/10 transition-all group">
+                    <span class="text-2xl group-hover:scale-110 transition-transform"><img src="../assets/faceicon.png"
+                            alt="" class="w-15"></span>
+                    <span class="font-medium">Facebook</span>
+                    <span class="text-[10px] opacity-80 truncate max-w-full">Vela Vida</span>
+                </a>
+
+                <!-- TikTok -->
+                <a href="#"
+                    class="flex flex-col saturate-25 hover:saturate-100 items-center justify-center space-y-1.5 p-2 rounded-xl hover:bg-[#FAF8F5]/10 transition-all group">
+                    <span class="text-2xl group-hover:scale-110 transition-transform"><img
+                            src="../assets/tiktokicon.png" alt="" class="w-15"></span>
+                    <span class="font-medium">TikTok</span>
+                    <span class="text-[10px] opacity-80 truncate max-w-full">@velavidaasenaal</span>
+                </a>
+
+                <!-- Sitio Web -->
+                <a href="#"
+                    class="flex flex-col saturate-25 hover:saturate-100 items-center justify-center space-y-1.5 p-2 rounded-xl hover:bg-[#FAF8F5]/10 transition-all group">
+                    <span class="text-2xl group-hover:scale-110 transition-transform"><img
+                            src="../assets/websiteicon.png" alt="" class="w-15"></span>
+                    <span class="font-medium">Sitio web</span>
+                    <span class="text-[10px] opacity-80 truncate max-w-full">www.velavida.com.co</span>
+                </a>
+
+            </div>
+
+            <!-- Línea y Derechos de autor -->
+            <div
+                class="border-t border-[#FAF8F5]/20 mt-6 pt-4 text-center text-[11px] opacity-80 flex flex-col sm:flex-row items-center justify-between gap-2">
+                <span>© 2026 Vela Vida. Todos los derechos reservados.</span>
+                <span class="font-serif italic">Velas que conectan e iluminan momentos</span>
+            </div>
+
+        </div>
+    </footer>
+
+</body>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    AOS.init({
+        duration: 900,
+        once: true,
+        offset: 100,
+    });
+
+    // Script del menú móvil de la tienda
+    const btn = document.getElementById('mobile-menu-btn');
+    const menu = document.getElementById('mobile-menu');
+    const iconOpen = document.getElementById('menu-icon-open');
+    const iconClose = document.getElementById('menu-icon-close');
+    const links = document.querySelectorAll('.mobile-link');
+
+    function toggleMenu() {
+        menu.classList.toggle('hidden');
+        iconOpen.classList.toggle('hidden');
+        iconClose.classList.toggle('hidden');
+    }
+
+    btn.addEventListener('click', toggleMenu);
+
+    links.forEach(link => {
+        link.addEventListener('click', () => {
+            if (!menu.classList.contains('hidden')) {
+                toggleMenu();
+            }
+        });
+    });
+</script>
+
+</html>
