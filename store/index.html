@@ -125,9 +125,10 @@
     </header>
 
     <!-- Sección: Catálogo / E-commerce Grid -->
+    <!-- Main / Catálogo de 14 Productos -->
     <main id="catalogo" class="max-w-7xl mx-auto px-6 py-12">
 
-        <!-- Filtros de Categorías (Opcional visual) -->
+        <!-- Filtros de Categorías -->
         <div class="flex flex-wrap justify-center gap-4 mb-12" data-aos="fade-up">
             <button
                 class="px-6 py-2 rounded-full bg-[#c8714a] text-white text-sm font-medium shadow-sm transition-all">Todos</button>
@@ -136,18 +137,19 @@
             <button
                 class="px-6 py-2 rounded-full bg-[#f0e9df] text-[#6d6655] hover:bg-[#c8714a] hover:text-white text-sm font-medium border border-[#e2d8ca] transition-all">Decorativas</button>
             <button
-                class="px-6 py-2 rounded-full bg-[#f0e9df] text-[#6d6655] hover:bg-[#c8714a] hover:text-white text-sm font-medium border border-[#e2d8ca] transition-all">Para
-                Eventos</button>
+                class="px-6 py-2 rounded-full bg-[#f0e9df] text-[#6d6655] hover:bg-[#c8714a] hover:text-white text-sm font-medium border border-[#e2d8ca] transition-all">Eventos
+                & Regalos</button>
         </div>
 
-        <!-- Grid de Productos (4 columnas en Desktop, 2 en Tablet, 1 en Mobile) -->
+        <!-- Grid de 14 Productos -->
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
 
             <!-- Producto 1 -->
-            <div class="bg-[#FAF8F5] rounded-3xl overflow-hidden border border-[#e2d8ca] shadow-sm flex flex-col justify-between group"
-                data-aos="fade-up" data-aos-delay="100">
+            <div class="bg-[#FAF8F5] rounded-3xl overflow-hidden border border-[#e2d8ca] shadow-sm flex flex-col justify-between group cursor-pointer"
+                data-aos="fade-up" data-aos-delay="100"
+                onclick="openProductModal('../assets/img_gallery_1.jpeg', 'Vela Artesanal Sensaciones 1', '$20.000 COP', 'Aromática', 'Elaborada artesanalmente con cera de soya de alta pureza y esencias botánicas relajantes.')">
                 <div class="relative h-72 overflow-hidden bg-[#f0e9df]">
-                    <img src="../assets/img3.png" alt="Vela Aromática Vainilla"
+                    <img src="../assets/img_gallery_1.jpeg" alt="Vela Artesanal 1"
                         class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
                     <span
                         class="absolute top-4 left-4 bg-[#c8714a] text-white text-[10px] uppercase tracking-wider px-3 py-1 rounded-full">Aromática</span>
@@ -155,26 +157,25 @@
                 <div class="p-6 space-y-3 flex-grow flex flex-col justify-between">
                     <div>
                         <h3 class="font-serif text-xl text-[#333333] group-hover:text-[#c8714a] transition-colors">Vela
-                            Aromática Vainilla</h3>
-                        <p class="text-xs text-[#6d6655] mt-1 font-light">Fragancia suave y relajante con notas de
-                            vainilla natural.</p>
+                            Artesanal Sensaciones 1</h3>
+                        <p class="text-xs text-[#6d6655] mt-1 font-light">Cera natural con extractos botánicos y mecha
+                            de algodón.</p>
                     </div>
                     <div class="pt-4 border-t border-[#e2d8ca] flex items-center justify-between">
                         <span class="font-serif text-lg font-bold text-[#b05d37]">$20.000 COP</span>
-                        <a href="https://wa.me/573000000000?text=Hola,%20estoy%20interesado%20en%20la%20Vela%20Aromática%20Vainilla"
-                            target="_blank"
-                            class="bg-[#8a9a86] hover:bg-[#72816f] text-white px-4 py-2 rounded-full text-xs font-medium transition-colors">
-                            Comprar
-                        </a>
+                        <span
+                            class="bg-[#8a9a86] group-hover:bg-[#72816f] text-white px-4 py-2 rounded-full text-xs font-medium transition-colors">Ver
+                            detalles</span>
                     </div>
                 </div>
             </div>
 
             <!-- Producto 2 -->
-            <div class="bg-[#FAF8F5] rounded-3xl overflow-hidden border border-[#e2d8ca] shadow-sm flex flex-col justify-between group"
-                data-aos="fade-up" data-aos-delay="200">
+            <div class="bg-[#FAF8F5] rounded-3xl overflow-hidden border border-[#e2d8ca] shadow-sm flex flex-col justify-between group cursor-pointer"
+                data-aos="fade-up" data-aos-delay="150"
+                onclick="openProductModal('../assets/img_gallery_2.jpeg', 'Vela Artesanal Sensaciones 2', '$22.000 COP', 'Decorativa', 'Pieza escultural ideal para centro de mesa o decoración de espacios de meditación.')">
                 <div class="relative h-72 overflow-hidden bg-[#f0e9df]">
-                    <img src="../assets/img2.jpg" alt="Vela Decorativa Escultural"
+                    <img src="../assets/img_gallery_2.jpeg" alt="Vela Artesanal 2"
                         class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
                     <span
                         class="absolute top-4 left-4 bg-[#8a9a86] text-white text-[10px] uppercase tracking-wider px-3 py-1 rounded-full">Decorativa</span>
@@ -182,77 +183,369 @@
                 <div class="p-6 space-y-3 flex-grow flex flex-col justify-between">
                     <div>
                         <h3 class="font-serif text-xl text-[#333333] group-hover:text-[#c8714a] transition-colors">Vela
-                            Decorativa Escultural</h3>
-                        <p class="text-xs text-[#6d6655] mt-1 font-light">Diseño exclusivo ideal para dar un toque
-                            moderno y estético a tus espacios.</p>
+                            Artesanal Sensaciones 2</h3>
+                        <p class="text-xs text-[#6d6655] mt-1 font-light">Diseño orgánico elaborado a mano con acabados
+                            suaves.</p>
                     </div>
                     <div class="pt-4 border-t border-[#e2d8ca] flex items-center justify-between">
-                        <span class="font-serif text-lg font-bold text-[#b05d37]">$25.000 COP</span>
-                        <a href="https://wa.me/573000000000?text=Hola,%20estoy%20interesado%20en%20la%20Vela%20Decorativa%20Escultural"
-                            target="_blank"
-                            class="bg-[#8a9a86] hover:bg-[#72816f] text-white px-4 py-2 rounded-full text-xs font-medium transition-colors">
-                            Comprar
-                        </a>
+                        <span class="font-serif text-lg font-bold text-[#b05d37]">$22.000 COP</span>
+                        <span
+                            class="bg-[#8a9a86] group-hover:bg-[#72816f] text-white px-4 py-2 rounded-full text-xs font-medium transition-colors">Ver
+                            detalles</span>
                     </div>
                 </div>
             </div>
 
             <!-- Producto 3 -->
-            <div class="bg-[#FAF8F5] rounded-3xl overflow-hidden border border-[#e2d8ca] shadow-sm flex flex-col justify-between group"
-                data-aos="fade-up" data-aos-delay="300">
+            <div class="bg-[#FAF8F5] rounded-3xl overflow-hidden border border-[#e2d8ca] shadow-sm flex flex-col justify-between group cursor-pointer"
+                data-aos="fade-up" data-aos-delay="200"
+                onclick="openProductModal('../assets/img_gallery_3.jpeg', 'Vela Artesanal Sensaciones 3', '$25.000 COP', 'Aromática', 'Mezcla aromática de canela y vainilla perfecta para ambientes cálidos.')">
                 <div class="relative h-72 overflow-hidden bg-[#f0e9df]">
-                    <img src="../assets/img4.png" alt="Set de Velas para Bodas"
+                    <img src="../assets/img_gallery_3.jpeg" alt="Vela Artesanal 3"
+                        class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    <span
+                        class="absolute top-4 left-4 bg-[#c8714a] text-white text-[10px] uppercase tracking-wider px-3 py-1 rounded-full">Aromática</span>
+                </div>
+                <div class="p-6 space-y-3 flex-grow flex flex-col justify-between">
+                    <div>
+                        <h3 class="font-serif text-xl text-[#333333] group-hover:text-[#c8714a] transition-colors">Vela
+                            Artesanal Sensaciones 3</h3>
+                        <p class="text-xs text-[#6d6655] mt-1 font-light">Especial de canela y vainilla con larga
+                            duración de quemado.</p>
+                    </div>
+                    <div class="pt-4 border-t border-[#e2d8ca] flex items-center justify-between">
+                        <span class="font-serif text-lg font-bold text-[#b05d37]">$25.000 COP</span>
+                        <span
+                            class="bg-[#8a9a86] group-hover:bg-[#72816f] text-white px-4 py-2 rounded-full text-xs font-medium transition-colors">Ver
+                            detalles</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Producto 4 -->
+            <div class="bg-[#FAF8F5] rounded-3xl overflow-hidden border border-[#e2d8ca] shadow-sm flex flex-col justify-between group cursor-pointer"
+                data-aos="fade-up" data-aos-delay="250"
+                onclick="openProductModal('../assets/img_gallery_4.jpeg', 'Vela Artesanal Sensaciones 4', '$18.000 COP', 'Eventos', 'Edición especial para recuerdos de reuniones y eventos familiares.')">
+                <div class="relative h-72 overflow-hidden bg-[#f0e9df]">
+                    <img src="../assets/img_gallery_4.jpeg" alt="Vela Artesanal 4"
                         class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
                     <span
                         class="absolute top-4 left-4 bg-[#b05d37] text-white text-[10px] uppercase tracking-wider px-3 py-1 rounded-full">Eventos</span>
                 </div>
                 <div class="p-6 space-y-3 flex-grow flex flex-col justify-between">
                     <div>
-                        <h3 class="font-serif text-xl text-[#333333] group-hover:text-[#c8714a] transition-colors">Velas
-                            para Eventos (Unidad)</h3>
-                        <p class="text-xs text-[#6d6655] mt-1 font-light">Personalizadas con etiquetas corporativas o
-                            recuerdos para bodas y bautizos.</p>
+                        <h3 class="font-serif text-xl text-[#333333] group-hover:text-[#c8714a] transition-colors">Vela
+                            Artesanal Sensaciones 4</h3>
+                        <p class="text-xs text-[#6d6655] mt-1 font-light">Presentación compacta ideal para obsequios
+                            grupales.</p>
                     </div>
                     <div class="pt-4 border-t border-[#e2d8ca] flex items-center justify-between">
-                        <span class="font-serif text-lg font-bold text-[#b05d37]">$15.000 COP</span>
-                        <a href="https://wa.me/573000000000?text=Hola,%20estoy%20interesado%20en%20las%20Velas%20para%20Eventos"
-                            target="_blank"
-                            class="bg-[#8a9a86] hover:bg-[#72816f] text-white px-4 py-2 rounded-full text-xs font-medium transition-colors">
-                            Comprar
-                        </a>
+                        <span class="font-serif text-lg font-bold text-[#b05d37]">$18.000 COP</span>
+                        <span
+                            class="bg-[#8a9a86] group-hover:bg-[#72816f] text-white px-4 py-2 rounded-full text-xs font-medium transition-colors">Ver
+                            detalles</span>
                     </div>
                 </div>
             </div>
 
-            <!-- Producto 4 -->
-            <div class="bg-[#FAF8F5] rounded-3xl overflow-hidden border border-[#e2d8ca] shadow-sm flex flex-col justify-between group"
-                data-aos="fade-up" data-aos-delay="400">
+            <!-- Producto 5 -->
+            <div class="bg-[#FAF8F5] rounded-3xl overflow-hidden border border-[#e2d8ca] shadow-sm flex flex-col justify-between group cursor-pointer"
+                data-aos="fade-up" data-aos-delay="100"
+                onclick="openProductModal('../assets/img_gallery_5.jpeg', 'Vela Artesanal Sensaciones 5', '$30.000 COP', 'Regalos', 'Empaque de lujo listo para regalar con tarjeta personalizada.')">
                 <div class="relative h-72 overflow-hidden bg-[#f0e9df]">
-                    <img src="../assets/img5.png" alt="Caja de Regalo Personalizada"
+                    <img src="../assets/img_gallery_5.jpeg" alt="Vela Artesanal 5"
                         class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
                     <span
                         class="absolute top-4 left-4 bg-[#8a9a86] text-white text-[10px] uppercase tracking-wider px-3 py-1 rounded-full">Regalos</span>
                 </div>
                 <div class="p-6 space-y-3 flex-grow flex flex-col justify-between">
                     <div>
-                        <h3 class="font-serif text-xl text-[#333333] group-hover:text-[#c8714a] transition-colors">Caja
-                            Regalo Personalizada</h3>
-                        <p class="text-xs text-[#6d6655] mt-1 font-light">Combinación de vela y figura decorativa en
-                            empaque especial para obsequio.</p>
+                        <h3 class="font-serif text-xl text-[#333333] group-hover:text-[#c8714a] transition-colors">Vela
+                            Artesanal Sensaciones 5</h3>
+                        <p class="text-xs text-[#6d6655] mt-1 font-light">Edición especial con caja decorativa incluida.
+                        </p>
                     </div>
                     <div class="pt-4 border-t border-[#e2d8ca] flex items-center justify-between">
-                        <span class="font-serif text-lg font-bold text-[#b05d37]">$35.000 COP</span>
-                        <a href="https://wa.me/573000000000?text=Hola,%20estoy%20interesado%20en%20la%20Caja%20Regalo%20Personalizada"
-                            target="_blank"
-                            class="bg-[#8a9a86] hover:bg-[#72816f] text-white px-4 py-2 rounded-full text-xs font-medium transition-colors">
-                            Comprar
-                        </a>
+                        <span class="font-serif text-lg font-bold text-[#b05d37]">$30.000 COP</span>
+                        <span
+                            class="bg-[#8a9a86] group-hover:bg-[#72816f] text-white px-4 py-2 rounded-full text-xs font-medium transition-colors">Ver
+                            detalles</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Producto 6 -->
+            <div class="bg-[#FAF8F5] rounded-3xl overflow-hidden border border-[#e2d8ca] shadow-sm flex flex-col justify-between group cursor-pointer"
+                data-aos="fade-up" data-aos-delay="150"
+                onclick="openProductModal('../assets/img_gallery_6.jpeg', 'Vela Artesanal Sensaciones 6', '$24.000 COP', 'Aromática', 'Esencia de lavanda francesa para favorecer el descanso y reducir el estrés.')">
+                <div class="relative h-72 overflow-hidden bg-[#f0e9df]">
+                    <img src="../assets/img_gallery_6.jpeg" alt="Vela Artesanal 6"
+                        class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    <span
+                        class="absolute top-4 left-4 bg-[#c8714a] text-white text-[10px] uppercase tracking-wider px-3 py-1 rounded-full">Aromática</span>
+                </div>
+                <div class="p-6 space-y-3 flex-grow flex flex-col justify-between">
+                    <div>
+                        <h3 class="font-serif text-xl text-[#333333] group-hover:text-[#c8714a] transition-colors">Vela
+                            Artesanal Sensaciones 6</h3>
+                        <p class="text-xs text-[#6d6655] mt-1 font-light">Infusionada con aceite esencial puro de
+                            lavanda.</p>
+                    </div>
+                    <div class="pt-4 border-t border-[#e2d8ca] flex items-center justify-between">
+                        <span class="font-serif text-lg font-bold text-[#b05d37]">$24.000 COP</span>
+                        <span
+                            class="bg-[#8a9a86] group-hover:bg-[#72816f] text-white px-4 py-2 rounded-full text-xs font-medium transition-colors">Ver
+                            detalles</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Producto 7 -->
+            <div class="bg-[#FAF8F5] rounded-3xl overflow-hidden border border-[#e2d8ca] shadow-sm flex flex-col justify-between group cursor-pointer"
+                data-aos="fade-up" data-aos-delay="200"
+                onclick="openProductModal('../assets/img_gallery_7.jpeg', 'Vela Artesanal Sensaciones 7', '$26.000 COP', 'Decorativa', 'Vela moldeada con ondas naturales que crean sombras envolventes al encender.')">
+                <div class="relative h-72 overflow-hidden bg-[#f0e9df]">
+                    <img src="../assets/img_gallery_7.jpeg" alt="Vela Artesanal 7"
+                        class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    <span
+                        class="absolute top-4 left-4 bg-[#8a9a86] text-white text-[10px] uppercase tracking-wider px-3 py-1 rounded-full">Decorativa</span>
+                </div>
+                <div class="p-6 space-y-3 flex-grow flex flex-col justify-between">
+                    <div>
+                        <h3 class="font-serif text-xl text-[#333333] group-hover:text-[#c8714a] transition-colors">Vela
+                            Artesanal Sensaciones 7</h3>
+                        <p class="text-xs text-[#6d6655] mt-1 font-light">Geometría limpia e iluminación suave para
+                            interiores.</p>
+                    </div>
+                    <div class="pt-4 border-t border-[#e2d8ca] flex items-center justify-between">
+                        <span class="font-serif text-lg font-bold text-[#b05d37]">$26.000 COP</span>
+                        <span
+                            class="bg-[#8a9a86] group-hover:bg-[#72816f] text-white px-4 py-2 rounded-full text-xs font-medium transition-colors">Ver
+                            detalles</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Producto 8 -->
+            <div class="bg-[#FAF8F5] rounded-3xl overflow-hidden border border-[#e2d8ca] shadow-sm flex flex-col justify-between group cursor-pointer"
+                data-aos="fade-up" data-aos-delay="250"
+                onclick="openProductModal('../assets/img_gallery_8.jpeg', 'Vela Artesanal Sensaciones 8', '$28.000 COP', 'Aromática', 'Notas tropicales de coco fresco y flor de jazmín.')">
+                <div class="relative h-72 overflow-hidden bg-[#f0e9df]">
+                    <img src="../assets/img_gallery_8.jpeg" alt="Vela Artesanal 8"
+                        class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    <span
+                        class="absolute top-4 left-4 bg-[#c8714a] text-white text-[10px] uppercase tracking-wider px-3 py-1 rounded-full">Aromática</span>
+                </div>
+                <div class="p-6 space-y-3 flex-grow flex flex-col justify-between">
+                    <div>
+                        <h3 class="font-serif text-xl text-[#333333] group-hover:text-[#c8714a] transition-colors">Vela
+                            Artesanal Sensaciones 8</h3>
+                        <p class="text-xs text-[#6d6655] mt-1 font-light">Combinación exótica y refrescante para salas y
+                            habitaciones.</p>
+                    </div>
+                    <div class="pt-4 border-t border-[#e2d8ca] flex items-center justify-between">
+                        <span class="font-serif text-lg font-bold text-[#b05d37]">$28.000 COP</span>
+                        <span
+                            class="bg-[#8a9a86] group-hover:bg-[#72816f] text-white px-4 py-2 rounded-full text-xs font-medium transition-colors">Ver
+                            detalles</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Producto 9 -->
+            <div class="bg-[#FAF8F5] rounded-3xl overflow-hidden border border-[#e2d8ca] shadow-sm flex flex-col justify-between group cursor-pointer"
+                data-aos="fade-up" data-aos-delay="100"
+                onclick="openProductModal('../assets/img_gallery_9.jpeg', 'Vela Artesanal Sensaciones 9', '$21.000 COP', 'Eventos', 'Ideal para bodas de playa o eventos campestres.')">
+                <div class="relative h-72 overflow-hidden bg-[#f0e9df]">
+                    <img src="../assets/img_gallery_9.jpeg" alt="Vela Artesanal 9"
+                        class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    <span
+                        class="absolute top-4 left-4 bg-[#b05d37] text-white text-[10px] uppercase tracking-wider px-3 py-1 rounded-full">Eventos</span>
+                </div>
+                <div class="p-6 space-y-3 flex-grow flex flex-col justify-between">
+                    <div>
+                        <h3 class="font-serif text-xl text-[#333333] group-hover:text-[#c8714a] transition-colors">Vela
+                            Artesanal Sensaciones 9</h3>
+                        <p class="text-xs text-[#6d6655] mt-1 font-light">Personalización de tono y lazo decorativo.</p>
+                    </div>
+                    <div class="pt-4 border-t border-[#e2d8ca] flex items-center justify-between">
+                        <span class="font-serif text-lg font-bold text-[#b05d37]">$21.000 COP</span>
+                        <span
+                            class="bg-[#8a9a86] group-hover:bg-[#72816f] text-white px-4 py-2 rounded-full text-xs font-medium transition-colors">Ver
+                            detalles</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Producto 10 -->
+            <div class="bg-[#FAF8F5] rounded-3xl overflow-hidden border border-[#e2d8ca] shadow-sm flex flex-col justify-between group cursor-pointer"
+                data-aos="fade-up" data-aos-delay="150"
+                onclick="openProductModal('../assets/img_gallery_10.jpeg', 'Vela Artesanal Sensaciones 10', '$23.000 COP', 'Decorativa', 'Vela cilíndrica multitono creada mediante vertido por capas.')">
+                <div class="relative h-72 overflow-hidden bg-[#f0e9df]">
+                    <img src="../assets/img_gallery_10.jpeg" alt="Vela Artesanal 10"
+                        class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    <span
+                        class="absolute top-4 left-4 bg-[#8a9a86] text-white text-[10px] uppercase tracking-wider px-3 py-1 rounded-full">Decorativa</span>
+                </div>
+                <div class="p-6 space-y-3 flex-grow flex flex-col justify-between">
+                    <div>
+                        <h3 class="font-serif text-xl text-[#333333] group-hover:text-[#c8714a] transition-colors">Vela
+                            Artesanal Sensaciones 10</h3>
+                        <p class="text-xs text-[#6d6655] mt-1 font-light">Textura única y gradación de color artesanal.
+                        </p>
+                    </div>
+                    <div class="pt-4 border-t border-[#e2d8ca] flex items-center justify-between">
+                        <span class="font-serif text-lg font-bold text-[#b05d37]">$23.000 COP</span>
+                        <span
+                            class="bg-[#8a9a86] group-hover:bg-[#72816f] text-white px-4 py-2 rounded-full text-xs font-medium transition-colors">Ver
+                            detalles</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Producto 11 -->
+            <div class="bg-[#FAF8F5] rounded-3xl overflow-hidden border border-[#e2d8ca] shadow-sm flex flex-col justify-between group cursor-pointer"
+                data-aos="fade-up" data-aos-delay="200"
+                onclick="openProductModal('../assets/img_gallery_11.jpeg', 'Vela Artesanal Sensaciones 11', '$27.000 COP', 'Aromática', 'Mezcla energizante de bergamota y frutos rojos.')">
+                <div class="relative h-72 overflow-hidden bg-[#f0e9df]">
+                    <img src="../assets/img_gallery_11.jpeg" alt="Vela Artesanal 11"
+                        class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    <span
+                        class="absolute top-4 left-4 bg-[#c8714a] text-white text-[10px] uppercase tracking-wider px-3 py-1 rounded-full">Aromática</span>
+                </div>
+                <div class="p-6 space-y-3 flex-grow flex flex-col justify-between">
+                    <div>
+                        <h3 class="font-serif text-xl text-[#333333] group-hover:text-[#c8714a] transition-colors">Vela
+                            Artesanal Sensaciones 11</h3>
+                        <p class="text-xs text-[#6d6655] mt-1 font-light">Fragancia vibrante para estimular la
+                            concentración.</p>
+                    </div>
+                    <div class="pt-4 border-t border-[#e2d8ca] flex items-center justify-between">
+                        <span class="font-serif text-lg font-bold text-[#b05d37]">$27.000 COP</span>
+                        <span
+                            class="bg-[#8a9a86] group-hover:bg-[#72816f] text-white px-4 py-2 rounded-full text-xs font-medium transition-colors">Ver
+                            detalles</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Producto 12 -->
+            <div class="bg-[#FAF8F5] rounded-3xl overflow-hidden border border-[#e2d8ca] shadow-sm flex flex-col justify-between group cursor-pointer"
+                data-aos="fade-up" data-aos-delay="250"
+                onclick="openProductModal('../assets/img_gallery_12.jpeg', 'Vela Artesanal Sensaciones 12', '$32.000 COP', 'Regalos', 'Set duplo con dos aromas complementarios en frascos reutilizables.')">
+                <div class="relative h-72 overflow-hidden bg-[#f0e9df]">
+                    <img src="../assets/img_gallery_12.jpeg" alt="Vela Artesanal 12"
+                        class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    <span
+                        class="absolute top-4 left-4 bg-[#8a9a86] text-white text-[10px] uppercase tracking-wider px-3 py-1 rounded-full">Regalos</span>
+                </div>
+                <div class="p-6 space-y-3 flex-grow flex flex-col justify-between">
+                    <div>
+                        <h3 class="font-serif text-xl text-[#333333] group-hover:text-[#c8714a] transition-colors">Vela
+                            Artesanal Sensaciones 12</h3>
+                        <p class="text-xs text-[#6d6655] mt-1 font-light">Set de regalo doble en empaque ecológico.</p>
+                    </div>
+                    <div class="pt-4 border-t border-[#e2d8ca] flex items-center justify-between">
+                        <span class="font-serif text-lg font-bold text-[#b05d37]">$32.000 COP</span>
+                        <span
+                            class="bg-[#8a9a86] group-hover:bg-[#72816f] text-white px-4 py-2 rounded-full text-xs font-medium transition-colors">Ver
+                            detalles</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Producto 13 -->
+            <div class="bg-[#FAF8F5] rounded-3xl overflow-hidden border border-[#e2d8ca] shadow-sm flex flex-col justify-between group cursor-pointer"
+                data-aos="fade-up" data-aos-delay="100"
+                onclick="openProductModal('../assets/img_gallery_13.jpeg', 'Vela Artesanal Sensaciones 13', '$19.000 COP', 'Decorativa', 'Mini vela decorativa para escritorios o repisas pequeñas.')">
+                <div class="relative h-72 overflow-hidden bg-[#f0e9df]">
+                    <img src="../assets/img_gallery_13.jpeg" alt="Vela Artesanal 13"
+                        class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    <span
+                        class="absolute top-4 left-4 bg-[#8a9a86] text-white text-[10px] uppercase tracking-wider px-3 py-1 rounded-full">Decorativa</span>
+                </div>
+                <div class="p-6 space-y-3 flex-grow flex flex-col justify-between">
+                    <div>
+                        <h3 class="font-serif text-xl text-[#333333] group-hover:text-[#c8714a] transition-colors">Vela
+                            Artesanal Sensaciones 13</h3>
+                        <p class="text-xs text-[#6d6655] mt-1 font-light">Detalle minimalista y delicado en tono pastel.
+                        </p>
+                    </div>
+                    <div class="pt-4 border-t border-[#e2d8ca] flex items-center justify-between">
+                        <span class="font-serif text-lg font-bold text-[#b05d37]">$19.000 COP</span>
+                        <span
+                            class="bg-[#8a9a86] group-hover:bg-[#72816f] text-white px-4 py-2 rounded-full text-xs font-medium transition-colors">Ver
+                            detalles</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Producto 14 -->
+            <div class="bg-[#FAF8F5] rounded-3xl overflow-hidden border border-[#e2d8ca] shadow-sm flex flex-col justify-between group cursor-pointer"
+                data-aos="fade-up" data-aos-delay="150"
+                onclick="openProductModal('../assets/img_gallery_14.jpeg', 'Vela Artesanal Sensaciones 14', '$29.000 COP', 'Aromática', 'Fragancia herbal de romero y eucalipto para purificar el ambiente.')">
+                <div class="relative h-72 overflow-hidden bg-[#f0e9df]">
+                    <img src="../assets/img_gallery_14.jpeg" alt="Vela Artesanal 14"
+                        class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    <span
+                        class="absolute top-4 left-4 bg-[#c8714a] text-white text-[10px] uppercase tracking-wider px-3 py-1 rounded-full">Aromática</span>
+                </div>
+                <div class="p-6 space-y-3 flex-grow flex flex-col justify-between">
+                    <div>
+                        <h3 class="font-serif text-xl text-[#333333] group-hover:text-[#c8714a] transition-colors">Vela
+                            Artesanal Sensaciones 14</h3>
+                        <p class="text-xs text-[#6d6655] mt-1 font-light">Inspiración botánica de romero y eucalipto.
+                        </p>
+                    </div>
+                    <div class="pt-4 border-t border-[#e2d8ca] flex items-center justify-between">
+                        <span class="font-serif text-lg font-bold text-[#b05d37]">$29.000 COP</span>
+                        <span
+                            class="bg-[#8a9a86] group-hover:bg-[#72816f] text-white px-4 py-2 rounded-full text-xs font-medium transition-colors">Ver
+                            detalles</span>
                     </div>
                 </div>
             </div>
 
         </div>
     </main>
+
+    <!-- Modal Interactivo para Ampliar la Información del Producto -->
+    <div id="productModal"
+        class="fixed inset-0 z-50 hidden bg-black/80 backdrop-blur-sm flex items-center justify-center p-4">
+        <div
+            class="bg-[#f7f4ee] rounded-3xl border border-[#e2d8ca] max-w-3xl w-full overflow-hidden shadow-2xl relative flex flex-col md:flex-row">
+            <!-- Botón para cerrar -->
+            <button onclick="closeProductModal()"
+                class="absolute top-4 right-4 z-10 w-9 h-9 rounded-full bg-[#f0e9df] text-[#6d6655] hover:text-[#c8714a] flex items-center justify-center font-bold text-xl transition-colors focus:outline-none">
+                &times;
+            </button>
+
+            <!-- Imagen del Modal -->
+            <div class="w-full md:w-1/2 h-72 md:h-auto bg-[#f0e9df]">
+                <img id="modalImg" src="" alt="" class="w-full h-full object-cover">
+            </div>
+
+            <!-- Contenido y detalles -->
+            <div class="w-full md:w-1/2 p-8 space-y-4 flex flex-col justify-between text-[#6d6655]">
+                <div class="space-y-3">
+                    <span id="modalCategory"
+                        class="inline-block bg-[#c8714a] text-white text-[10px] uppercase tracking-wider px-3 py-1 rounded-full"></span>
+                    <h3 id="modalTitle" class="font-serif text-2xl md:text-3xl text-[#333333] font-normal"></h3>
+                    <p id="modalPrice" class="font-serif text-xl font-bold text-[#b05d37]"></p>
+                    <div class="border-t border-[#e2d8ca] pt-3">
+                        <h4 class="text-xs font-bold uppercase tracking-wider text-[#8a9a86] mb-1">Descripción</h4>
+                        <p id="modalDescription" class="text-xs text-[#6d6655] leading-relaxed font-light"></p>
+                    </div>
+                </div>
+
+                <!-- Botón de Pedido a WhatsApp -->
+                <a id="modalWppBtn" href="#" target="_blank"
+                    class="w-full bg-[#8a9a86] hover:bg-[#72816f] text-white text-center py-3 rounded-full text-sm font-medium transition-colors shadow-sm flex items-center justify-center gap-2">
+                    <span>💬</span> Encargar por WhatsApp
+                </a>
+            </div>
+        </div>
+    </div>
 
     <!-- Footer Idéntico al Index -->
     <footer
@@ -360,6 +653,42 @@
                 toggleMenu();
             }
         });
+    });
+
+    function openProductModal(imgSrc, title, price, category, description) {
+        document.getElementById('modalImg').src = imgSrc;
+        document.getElementById('modalTitle').textContent = title;
+        document.getElementById('modalPrice').textContent = price;
+        document.getElementById('modalCategory').textContent = category;
+        document.getElementById('modalDescription').textContent = description;
+
+        // Enlace directo a WhatsApp con el mensaje personalizado del producto
+        const wppUrl = `https://wa.me/573000000000?text=${encodeURIComponent('Hola, me interesa comprar: ' + title + ' (' + price + ')')}`;
+        document.getElementById('modalWppBtn').href = wppUrl;
+
+        const modal = document.getElementById('productModal');
+        modal.classList.remove('hidden');
+        document.body.style.overflow = 'hidden'; // Bloquea el scroll del fondo
+    }
+
+    function closeProductModal() {
+        const modal = document.getElementById('productModal');
+        modal.classList.add('hidden');
+        document.body.style.overflow = 'auto'; // Restaura el scroll
+    }
+
+    // Cerrar el modal al hacer clic en el fondo oscuro
+    document.getElementById('productModal').addEventListener('click', function (e) {
+        if (e.target === this) {
+            closeProductModal();
+        }
+    });
+
+    // Cerrar con la tecla ESC
+    document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape') {
+            closeProductModal();
+        }
     });
 </script>
 
